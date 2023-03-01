@@ -6,4 +6,6 @@ const router = express.Router();
 
 router.use("/", gameController.getGames);
 
+router.get("upload", gameController.uploadGames);
+
 module.exports = router;

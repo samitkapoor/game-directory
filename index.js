@@ -14,8 +14,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
 
-app.use("/", gameRoutes);
+app.use(gameRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Serve is running at ${PORT}`);
+  console.log(`Server is running at ${PORT}`);
 });
