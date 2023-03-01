@@ -1,0 +1,27 @@
+{
+  "name": "gameopolis",
+  "version": "1.0.0",
+  "description": "Gameopolis - A must visit place for all gamers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samitkapoor/game-directory.git"
+  },
+  "author": "Samit Kapoor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samitkapoor/game-directory/issues"
+  },
+  "homepage": "https://github.com/samitkapoor/game-directory#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,53 @@
+.games-collection {
+    display: flex;
+}
+
+.game {
+    height: 350px;
+    width: 250px;
+    display: grid;
+    background-color: transparent;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.game>* {
+    grid-area: 1/1;
+}
+
+.game-cover {
+    height: 350px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.game-name {
+    align-self: end;
+    color: white;
+
+    padding: 10px 10px;
+    text-align: center;
+
+    transform: translateY(100px);
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    transition: transform 250ms, font-size 500ms, font-style 500ms, text-shadow 500ms;
+
+    font-size: 16px;
+}
+
+.game-name:hover {
+    text-shadow: -0.15em 0 1px rgba(255, 0, 0, 0.67), 0.15em 0 1px rgba(0, 255, 255, 0.67);
+    font-style: italic;
+
+    font-size: 18px;
+}
+
+.game:hover .game-name {
+    transform: translateY(0px);
+}

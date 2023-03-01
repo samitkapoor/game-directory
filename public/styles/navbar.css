@@ -41,3 +41,7 @@ header {
 .actions a:hover {
     background-color: rgb(5, 49, 124);
 }
+
+.actions .selected {
+    background-color: rgb(209, 0, 0);
+}
