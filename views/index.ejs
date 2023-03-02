@@ -14,7 +14,7 @@
 
 <body>
   <header>
-    <div class="title">Gameopolis</div>
+    <div class="title" onclick="returnHome()">Gameopolis</div>
     <nav class="actions">
       <a href="/" class="selected">Home</a>
       <a href="upload">Upload</a>
@@ -23,12 +23,15 @@
   </header>
   <main class="games-collection">
     <% for (var i = 0 ; i < games.length ; i++){ %>
-    <div class="game">
-      <img class="game-cover" src=<%= games[i].imageUrl %> alt="" />
-      <h4 class="game-name"><%= games[i].name %></h4>
+    <div id=<%=i%> class="game" onclick="gameDetails()">
+      <img id=<%=i%> class="game-cover" src=<%= games[i].imageUrl %> alt="" />
+      <h4 id=<%=i%> class="game-name"><%= games[i].name %></h4>
     </div>
     <% } %>
   </main>
+
+  <script src="./scripts/returnHome.js"></script>
+  <script src="./scripts/gamedetails.js"></script>
 </body>
 
 </html>

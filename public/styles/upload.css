@@ -1,0 +1,42 @@
+main {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+textarea,
+input {
+    background-color: transparent;
+    padding: 10px 20px;
+
+    color: rgb(245, 245, 245);
+
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+textarea {
+    border-bottom-right-radius: 0px;
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: rgb(207, 207, 207);
+}
+
+.submit-btn {
+    background-color: rgb(209, 0, 0);
+
+    cursor: pointer;
+
+    outline: none;
+    border: none;
+}

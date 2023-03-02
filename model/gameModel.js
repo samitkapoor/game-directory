@@ -1,7 +1,8 @@
 class Game {
-  constructor(imageUrl, name) {
+  constructor(imageUrl, name, description) {
     this.imageUrl = imageUrl;
     this.name = name;
+    this.description = description;
   }
 }
 
