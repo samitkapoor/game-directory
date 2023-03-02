@@ -37,16 +37,9 @@
 
     background-color: rgba(0, 0, 0, 0.6);
 
-    transition: transform 250ms, font-size 500ms, font-style 500ms, text-shadow 500ms;
+    transition: 250ms;
 
     font-size: 16px;
-}
-
-.game-name:hover {
-    text-shadow: -0.15em 0 1px rgba(255, 0, 0, 0.67), 0.15em 0 1px rgba(0, 255, 255, 0.67);
-    font-style: italic;
-
-    font-size: 18px;
 }
 
 .game:hover .game-name {
