@@ -4,8 +4,10 @@ const gameController = require("../controllers/gameController");
 
 const router = express.Router();
 
-router.use("/", gameController.getGames);
+router.get("/upload", gameController.uploadGames);
 
-router.get("upload", gameController.uploadGames);
+router.get("/about", gameController.about);
+
+router.use("/", gameController.getGames);
 
 module.exports = router;

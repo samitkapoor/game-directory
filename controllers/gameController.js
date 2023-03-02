@@ -26,3 +26,7 @@ exports.getGames = function (req, res, next) {
 exports.uploadGames = function (req, res, next) {
   res.render("upload");
 };
+
+exports.about = function (req, res, next) {
+  res.render("about");
+};
