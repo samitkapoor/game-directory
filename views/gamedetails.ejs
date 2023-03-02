@@ -21,7 +21,11 @@
       <a href="about">About</a>
     </nav>
   </header>
-  <main class="game-details"></main>
+  <main class="game-details">
+    <img class="game-image" src=<%= game.imageUrl %> alt="">
+    <h1 class="title"><%= game.name %></h1>
+    <h5 class="description"><%= game.description %></h5>
+  </main>
   <script src="./scripts/returnHome.js"></script>
 </body>
 
