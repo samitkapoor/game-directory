@@ -22,3 +22,20 @@
     letter-spacing: 1px;
     cursor: default;
 }
+
+.edit-btn {
+    margin-top: 25px;
+
+    padding: 10px 30px;
+
+    border-radius: 5px;
+    background-color: rgb(20, 50, 95);
+    color: rgb(245, 245, 245);
+
+    cursor: pointer;
+    transition: 150ms;
+}
+
+.edit-btn:hover {
+    background-color: rgb(5, 88, 230);
+}

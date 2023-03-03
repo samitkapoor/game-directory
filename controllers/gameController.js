@@ -96,5 +96,22 @@ exports.addGame = function (req, res, next) {
 
 exports.gameDetails = function (req, res, next) {
   var index = req.url.split("=")[1];
-  res.render("gamedetails", { game: games[index] });
+  res.render("gamedetails", { game: games[index], index: index });
+};
+
+exports.editGame = function (req, res, next) {
+  const id = req.body.id;
+
+  res.render("editgame.ejs", { game: games[id], id: id });
+};
+
+exports.updateGame = function (req, res, next) {
+  const gamename = req.body.gamename;
+  const gameimage = req.body.gameimage;
+  const gamedescription = req.body.gamedescription;
+  const id = req.body.submitid;
+
+  games[id] = new Game(gameimage, gamename, gamedescription);
+
+  res.render("index", { games });
 };

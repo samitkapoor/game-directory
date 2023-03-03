@@ -25,6 +25,10 @@
     <img class="game-image" src=<%= game.imageUrl %> alt="">
     <h1 class="title"><%= game.name %></h1>
     <h5 class="description"><%= game.description %></h5>
+
+    <form action="/edit-game" method="POST">
+      <button class="edit-btn" name="id" value=<%= index %>>Edit</button>
+    </form>
   </main>
   <script src="./scripts/returnHome.js"></script>
 </body>

@@ -12,6 +12,10 @@ router.get("/game-details", gameController.gameDetails);
 
 router.post("/add-game", gameController.addGame);
 
+router.post("/edit-game", gameController.editGame);
+
+router.post("/", gameController.updateGame);
+
 router.use("/", gameController.getGames);
 
 module.exports = router;

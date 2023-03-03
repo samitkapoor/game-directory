@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Game</title>
+
+  <link rel="stylesheet" href="./styles/template.css" />
+  <link rel="stylesheet" href="../styles/upload.css" />
+</head>
+
+<body>
+  <main>
+    <form autocomplete="off" action="/" method="POST">
+      <input name="gamename" type="text" placeholder="Game Name" value="<%= game.name %>" />
+      <input name="gameimage" type="text" placeholder="Game Cover URL" value=<%= game.imageUrl %> />
+      <textarea name="gamedescription" id="" cols="60" rows="10" placeholder="Game Description"><%= game.description %></textarea>
+      <input class="submit-btn" name="submitid" type="submit" value=<%= id %> />
+    </form>
+  </main>
+</body>
+
+</html>
