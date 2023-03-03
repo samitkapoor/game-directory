@@ -7,6 +7,8 @@ Gameopolis - A node.js application offering reviews on latest video games!
 
 ![image](https://user-images.githubusercontent.com/77121931/222811122-afc423f2-e784-4542-b1c4-76f48dfd659f.png)
 
+https://user-images.githubusercontent.com/77121931/222813573-b915264c-30a9-47d7-820c-b867c5aa1c27.mp4
+
 ## Follow the steps below to run this project
 - Make sure you have node.js and related programs installed on your computer.
 - Clone this repository by following the steps mentioned
