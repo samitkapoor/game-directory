@@ -87,8 +87,6 @@ exports.addGame = function (req, res, next) {
     req.body.gamedescription
   );
 
-  console.log(newGame);
-
   games.push(newGame);
 
   res.render("upload");
@@ -106,8 +104,6 @@ exports.editGame = function (req, res, next) {
 };
 
 exports.updateGame = function (req, res, next) {
-  console.log(req.body);
-
   const gamename = req.body.gamename;
   const gameimage = req.body.gameimage;
   const gamedescription = req.body.gamedescription;
