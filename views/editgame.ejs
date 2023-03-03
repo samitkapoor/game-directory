@@ -14,10 +14,11 @@
 <body>
   <main>
     <form autocomplete="off" action="/" method="POST">
+      <input name="submitid" value=<%= id %> type="text" readonly />
       <input name="gamename" type="text" placeholder="Game Name" value="<%= game.name %>" />
       <input name="gameimage" type="text" placeholder="Game Cover URL" value=<%= game.imageUrl %> />
       <textarea name="gamedescription" id="" cols="60" rows="10" placeholder="Game Description"><%= game.description %></textarea>
-      <input class="submit-btn" name="submitid" type="submit" value=<%= id %> />
+      <input class="submit-btn" type="submit" />
     </form>
   </main>
 </body>
