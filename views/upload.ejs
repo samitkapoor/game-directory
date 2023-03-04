@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gameopolis</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gameopolis</title>
+    <link rel="stylesheet" href="../styles/template.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/upload.css" />
+  </head>
 
-  <link rel="stylesheet" href="../styles/template.css" />
-  <link rel="stylesheet" href="../styles/navbar.css" />
-  <link rel="stylesheet" href="../styles/upload.css" />
-</head>
-
-<body>
-  <header>
-    <div class="title" onclick="returnHome()">Gameopolis</div>
-    <nav class="actions">
-      <a href="/">Home</a>
-      <a href="upload" class="selected">Upload</a>
-      <a href="about">About</a>
-    </nav>
-  </header>
-  <main>
-    <form autocomplete="off" action="/add-game" method="POST">
-      <input name="gamename" type="text" placeholder="Game Name" />
-      <input name="gameimage" type="text" placeholder="Game Cover URL" />
-      <textarea name="gamedescription" id="" cols="60" rows="10" placeholder="Game Description"></textarea>
-      <input class="submit-btn" type="submit" />
-    </form>
-  </main>
-  <script src="./scripts/returnHome.js"></script>
-</body>
-
+  <body>
+    <header>
+      <div class="title" onclick="returnHome()">Gameopolis</div>
+      <nav class="actions">
+        <a href="/">Home</a>
+        <a href="upload" class="selected">Upload</a>
+        <a href="about">About</a>
+      </nav>
+    </header>
+    <main>
+      <form autocomplete="off" action="/add-game" method="POST">
+        <input name="gamename" type="text" required placeholder="Game Name" />
+        <input
+          name="gameimage"
+          type="text"
+          required
+          placeholder="Game Cover URL"
+        />
+        <textarea
+          name="gamedescription"
+          id=""
+          cols="60"
+          rows="10"
+          placeholder="Game Description"
+        ></textarea>
+        <input class="submit-btn" type="submit" />
+      </form>
+    </main>
+    <script src="./scripts/returnHome.js"></script>
+  </body>
 </html>
