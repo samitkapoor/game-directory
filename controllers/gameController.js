@@ -69,15 +69,15 @@ var games = [
 ];
 
 exports.getGames = function (req, res, next) {
-  res.render("index", { games });
+  res.render("user/index", { games });
 };
 
 exports.uploadGames = function (req, res, next) {
-  res.render("upload");
+  res.render("user/upload");
 };
 
 exports.about = function (req, res, next) {
-  res.render("about");
+  res.render("user/about");
 };
 
 exports.addGame = function (req, res, next) {
@@ -89,18 +89,18 @@ exports.addGame = function (req, res, next) {
 
   games.push(newGame);
 
-  res.render("upload");
+  res.render("user/upload");
 };
 
 exports.gameDetails = function (req, res, next) {
   var index = req.url.split("=")[1];
-  res.render("gamedetails", { game: games[index], index: index });
+  res.render("user/gamedetails", { game: games[index], index: index });
 };
 
 exports.editGame = function (req, res, next) {
   const id = req.body.id;
 
-  res.render("editgame.ejs", { game: games[id], id: id });
+  res.render("user/editgame", { game: games[id], id: id });
 };
 
 exports.updateGame = function (req, res, next) {
@@ -111,5 +111,5 @@ exports.updateGame = function (req, res, next) {
 
   games[id] = new Game(gameimage, gamename, gamedescription);
 
-  res.render("index", { games });
+  res.render("user/index", { games });
 };

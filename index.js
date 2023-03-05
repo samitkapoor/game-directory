@@ -3,6 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 
 const gameRoutes = require("./routes/gameRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
 
+app.use(adminRoutes);
 app.use(gameRoutes);
 
 app.listen(PORT, () => {
