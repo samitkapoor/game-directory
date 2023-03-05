@@ -8,11 +8,23 @@ main {
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0px;
+
+    width: 400px;
+}
+
+.label {
+    color: rgb(245, 245, 245);
+    letter-spacing: 2px;
+    font-size: 14px;
+
+    margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 textarea,
 input {
+    margin-bottom: 15px;
     background-color: transparent;
     padding: 10px 20px;
 
