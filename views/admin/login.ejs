@@ -6,10 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin-Login</title>
+
+  <link rel="stylesheet" href="./styles/template.css" />
+  <link rel="stylesheet" href="./styles/navbar.css" />
+  <link rel="stylesheet" href="./styles/form.css" />
 </head>
 
 <body>
-  Admin login page
+  <header>
+    <div class="title" onclick="returnHome()">Gameopolis</div>
+    <nav class="actions">
+      <a href="/">Home</a>
+      <a href="upload">Upload</a>
+      <a href="about">About</a>
+    </nav>
+  </header>
+  <main>
+    <form autocomplete="off" action="/login" method="POST">
+      <input name="username" type="text" required placeholder="Username" />
+      <input name="password" type="password" required placeholder="Password" />
+      <input class="submit-btn" type="submit" />
+    </form>
+  </main>
 </body>
 
 </html>
