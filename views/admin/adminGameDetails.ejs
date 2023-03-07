@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gameopolis</title>
+
+  <link rel="stylesheet" href="../styles/template.css" />
+  <link rel="stylesheet" href="../styles/navbar.css" />
+  <link rel="stylesheet" href="../styles/gamedetails.css" />
+</head>
+
+<body>
+  <header>
+    <div class="title" onclick="returnHome()">Gameopolis</div>
+    <nav class="actions">
+      <a href="/">Home</a>
+      <a href="upload">Upload</a>
+      <a href="about">About</a>
+    </nav>
+  </header>
+  <main class="game-details">
+    <img class="game-image" src=<%= game.imageUrl %> alt="">
+    <h1 class="title"><%= game.name %></h1>
+    <h5 class="description"><%= game.description %></h5>
+
+    <form action="/accept-game" method="POST">
+      <button class="edit-btn green" name="accept" value=<%= index %>>Accept</button>
+      <button class="edit-btn red" formaction="/reject-game" name="reject" value=<%= index %>>Reject</button>
+    </form>
+  </main>
+  <script src="./scripts/returnHome.js"></script>
+</body>
+
+</html>

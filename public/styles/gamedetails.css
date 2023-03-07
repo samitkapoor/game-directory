@@ -39,3 +39,11 @@
 .edit-btn:hover {
     background-color: rgb(5, 88, 230);
 }
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}

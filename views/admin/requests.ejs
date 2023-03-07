@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gameopolis</title>
+
+  <link rel="stylesheet" href="./styles/template.css" />
+  <link rel="stylesheet" href="./styles/navbar.css" />
+  <link rel="stylesheet" href="./styles/games.css" />
+</head>
+
+<body>
+  <header>
+    <div class="title" onclick="returnHome()">Gameopolis</div>
+    <nav class="actions">
+      <a href="/">Home</a>
+      <a href="upload">Upload</a>
+      <a href="about">About</a>
+    </nav>
+  </header>
+  <main class="games-collection">
+    <% for (var i = 0 ; i < games.length ; i++){ %>
+    <div id=<%=i%> class="game" onclick="gameDetailsForAdmin()">
+      <img id=<%=i%> class="game-cover" src=<%= games[i].imageUrl %> alt="" />
+      <h4 id=<%=i%> class="game-name"><%= games[i].name %></h4>
+    </div>
+    <% } %>
+  </main>
+
+  <script src="./scripts/returnHome.js"></script>
+  <script src="./scripts/gamedetails.js"></script>
+</body>
+
+</html>

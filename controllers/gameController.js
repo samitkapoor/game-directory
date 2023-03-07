@@ -107,6 +107,16 @@ exports.addGame = function (req, res, next) {
   res.render("./user/index", { games });
 };
 
+exports.addGameThroughAdmin = (req, res, next) => {
+  let adminGames = adminController.getGames();
+  let acceptedGame = adminGames[req.body.accept];
+  games.push(acceptedGame);
+
+  adminController.removeGame(req.body.accept);
+
+  res.render("./admin/requests", { games: adminGames });
+};
+
 exports.gameDetails = function (req, res, next) {
   var index = req.url.split("=")[1];
   res.render("user/gamedetails", { game: games[index], index: index });
