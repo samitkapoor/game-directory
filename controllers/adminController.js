@@ -17,7 +17,10 @@ exports.adminLogin = (req, res, next) => {
 };
 
 exports.loginAdmin = (req, res, next) => {
-  res.render("admin/requests", { games });
+  res.render("admin/requests", {
+    games: games,
+    collection: gameController.getCollection(),
+  });
 };
 
 exports.requestGameDetails = (req, res, next) => {

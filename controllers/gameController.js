@@ -138,3 +138,7 @@ exports.updateGame = function (req, res, next) {
 
   res.render("user/index", { games });
 };
+
+exports.getCollection = () => {
+  return games;
+};

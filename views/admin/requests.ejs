@@ -22,12 +22,28 @@
     </nav>
   </header>
   <main class="games-collection">
+    <div class="text">Requests</div>
+    <% if(games.length != 0) { %>
     <% for (var i = 0 ; i < games.length ; i++){ %>
     <div id=<%=i%> class="game" onclick="gameDetailsForAdmin()">
       <img id=<%=i%> class="game-cover" src=<%= games[i].imageUrl %> alt="" />
       <h4 id=<%=i%> class="game-name"><%= games[i].name %></h4>
     </div>
     <% } %>
+    <% } else { %>
+    <div class="text">No game requests!</div>
+    <%}%>
+    <div class="text">Collection</div>
+    <% if(collection.length != 0) { %>
+    <% for (var i = 0 ; i < collection.length ; i++){ %>
+    <div id=<%=i%> class="game" onclick="gameDetails()">
+      <img id=<%=i%> class="game-cover" src=<%= collection[i].imageUrl %> alt="" />
+      <h4 id=<%=i%> class="game-name"><%= collection[i].name %></h4>
+    </div>
+    <% } %>
+    <% } else { %>
+    <div class="text">No game requests!</div>
+    <%}%>
   </main>
 
   <script src="./scripts/returnHome.js"></script>
